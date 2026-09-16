@@ -1,0 +1,23 @@
+{
+  "name": "massage-box-backend",
+  "version": "0.2.0",
+  "description": "Backend for smart massage-chair box: UPI (Razorpay dynamic QR) + RFID wallet",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "migrate": "node src/lib/migrate.js",
+    "migrate:wallet": "node src/lib/migrate-wallet.js",
+    "seed": "node src/lib/seed.js",
+    "seed:wallet": "node src/lib/seed-wallet.js",
+    "sim:upi": "node src/lib/machine-sim.js",
+    "sim:rfid": "node src/lib/rfid-sim.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "pg": "^8.12.0",
+    "razorpay": "^2.9.4"
+  }
+}
